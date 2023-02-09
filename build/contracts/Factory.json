@@ -1,0 +1,1695 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "name": "blueprint_address",
+          "type": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "name": "name",
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "type": "string"
+        },
+        {
+          "name": "decimals",
+          "type": "uint8"
+        },
+        {
+          "name": "supply",
+          "type": "uint256"
+        }
+      ],
+      "name": "create_new_erc20",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/tests/Factory.vy"
+  },
+  "ast": {
+    "ast_type": "Module",
+    "body": [
+      {
+        "alias": null,
+        "ast_type": "ImportFrom",
+        "col_offset": 0,
+        "end_col_offset": 34,
+        "end_lineno": 3,
+        "level": 0,
+        "lineno": 3,
+        "module": "vyper.interfaces",
+        "name": "ERC20",
+        "node_id": 1,
+        "src": "19:34:1"
+      },
+      {
+        "annotation": {
+          "ast_type": "Name",
+          "col_offset": 21,
+          "end_col_offset": 28,
+          "end_lineno": 5,
+          "id": "address",
+          "lineno": 5,
+          "node_id": 9,
+          "src": "76:7:1"
+        },
+        "ast_type": "VariableDecl",
+        "col_offset": 0,
+        "end_col_offset": 29,
+        "end_lineno": 5,
+        "is_constant": false,
+        "is_immutable": true,
+        "is_public": false,
+        "lineno": 5,
+        "node_id": 3,
+        "src": "55:29:1",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 9,
+          "end_lineno": 5,
+          "id": "BLUEPRINT",
+          "lineno": 5,
+          "node_id": 4,
+          "src": "55:9:1"
+        },
+        "value": null
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 32,
+                "end_col_offset": 39,
+                "end_lineno": 8,
+                "id": "address",
+                "lineno": 8,
+                "node_id": 14,
+                "src": "128:7:1"
+              },
+              "arg": "blueprint_address",
+              "ast_type": "arg",
+              "col_offset": 13,
+              "end_col_offset": 39,
+              "end_lineno": 8,
+              "lineno": 8,
+              "node_id": 13,
+              "src": "109:26:1"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 13,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 39,
+          "end_lineno": 8,
+          "lineno": 8,
+          "node_id": 12,
+          "src": "109:26:1"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 33,
+            "end_lineno": 9,
+            "lineno": 9,
+            "node_id": 16,
+            "src": "142:29:1",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 13,
+              "end_lineno": 9,
+              "id": "BLUEPRINT",
+              "lineno": 9,
+              "node_id": 17,
+              "src": "142:9:1"
+            },
+            "value": {
+              "ast_type": "Name",
+              "col_offset": 16,
+              "end_col_offset": 33,
+              "end_lineno": 9,
+              "id": "blueprint_address",
+              "lineno": 9,
+              "node_id": 19,
+              "src": "154:17:1"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 7,
+            "id": "external",
+            "lineno": 7,
+            "node_id": 21,
+            "src": "87:8:1"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 33,
+        "end_lineno": 9,
+        "lineno": 8,
+        "name": "__init__",
+        "node_id": 11,
+        "pos": null,
+        "returns": null,
+        "src": "96:75:1"
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Subscript",
+                "col_offset": 27,
+                "end_col_offset": 37,
+                "end_lineno": 12,
+                "lineno": 12,
+                "node_id": 26,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 27,
+                  "end_col_offset": 37,
+                  "end_lineno": 12,
+                  "lineno": 12,
+                  "node_id": 31,
+                  "src": "210:10:1",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 34,
+                    "end_col_offset": 36,
+                    "end_lineno": 12,
+                    "lineno": 12,
+                    "node_id": 29,
+                    "src": "217:2:1",
+                    "value": 32
+                  }
+                },
+                "src": "210:10:1",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 27,
+                  "end_col_offset": 33,
+                  "end_lineno": 12,
+                  "id": "String",
+                  "lineno": 12,
+                  "node_id": 27,
+                  "src": "210:6:1"
+                }
+              },
+              "arg": "name",
+              "ast_type": "arg",
+              "col_offset": 21,
+              "end_col_offset": 37,
+              "end_lineno": 12,
+              "lineno": 12,
+              "node_id": 25,
+              "src": "204:16:1"
+            },
+            {
+              "annotation": {
+                "ast_type": "Subscript",
+                "col_offset": 47,
+                "end_col_offset": 57,
+                "end_lineno": 12,
+                "lineno": 12,
+                "node_id": 33,
+                "slice": {
+                  "ast_type": "Index",
+                  "col_offset": 47,
+                  "end_col_offset": 57,
+                  "end_lineno": 12,
+                  "lineno": 12,
+                  "node_id": 38,
+                  "src": "230:10:1",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 54,
+                    "end_col_offset": 56,
+                    "end_lineno": 12,
+                    "lineno": 12,
+                    "node_id": 36,
+                    "src": "237:2:1",
+                    "value": 32
+                  }
+                },
+                "src": "230:10:1",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 47,
+                  "end_col_offset": 53,
+                  "end_lineno": 12,
+                  "id": "String",
+                  "lineno": 12,
+                  "node_id": 34,
+                  "src": "230:6:1"
+                }
+              },
+              "arg": "symbol",
+              "ast_type": "arg",
+              "col_offset": 39,
+              "end_col_offset": 57,
+              "end_lineno": 12,
+              "lineno": 12,
+              "node_id": 32,
+              "src": "222:18:1"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 69,
+                "end_col_offset": 74,
+                "end_lineno": 12,
+                "id": "uint8",
+                "lineno": 12,
+                "node_id": 40,
+                "src": "252:5:1"
+              },
+              "arg": "decimals",
+              "ast_type": "arg",
+              "col_offset": 59,
+              "end_col_offset": 74,
+              "end_lineno": 12,
+              "lineno": 12,
+              "node_id": 39,
+              "src": "242:15:1"
+            },
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 84,
+                "end_col_offset": 91,
+                "end_lineno": 12,
+                "id": "uint256",
+                "lineno": 12,
+                "node_id": 43,
+                "src": "267:7:1"
+              },
+              "arg": "supply",
+              "ast_type": "arg",
+              "col_offset": 76,
+              "end_col_offset": 91,
+              "end_lineno": 12,
+              "lineno": 12,
+              "node_id": 42,
+              "src": "259:15:1"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 21,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 91,
+          "end_lineno": 12,
+          "lineno": 12,
+          "node_id": 24,
+          "src": "204:70:1"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 7,
+              "end_col_offset": 14,
+              "end_lineno": 13,
+              "id": "address",
+              "lineno": 13,
+              "node_id": 48,
+              "src": "293:7:1"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 96,
+            "end_lineno": 13,
+            "lineno": 13,
+            "node_id": 45,
+            "simple": 1,
+            "src": "290:92:1",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 5,
+              "end_lineno": 13,
+              "id": "t",
+              "lineno": 13,
+              "node_id": 46,
+              "src": "290:1:1"
+            },
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 39,
+                  "end_col_offset": 48,
+                  "end_lineno": 13,
+                  "id": "BLUEPRINT",
+                  "lineno": 13,
+                  "node_id": 53,
+                  "src": "325:9:1"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 50,
+                  "end_col_offset": 54,
+                  "end_lineno": 13,
+                  "id": "name",
+                  "lineno": 13,
+                  "node_id": 55,
+                  "src": "336:4:1"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 56,
+                  "end_col_offset": 62,
+                  "end_lineno": 13,
+                  "id": "symbol",
+                  "lineno": 13,
+                  "node_id": 57,
+                  "src": "342:6:1"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 64,
+                  "end_col_offset": 72,
+                  "end_lineno": 13,
+                  "id": "decimals",
+                  "lineno": 13,
+                  "node_id": 59,
+                  "src": "350:8:1"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 74,
+                  "end_col_offset": 80,
+                  "end_lineno": 13,
+                  "id": "supply",
+                  "lineno": 13,
+                  "node_id": 61,
+                  "src": "360:6:1"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 17,
+              "end_col_offset": 96,
+              "end_lineno": 13,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 17,
+                "end_col_offset": 38,
+                "end_lineno": 13,
+                "id": "create_from_blueprint",
+                "lineno": 13,
+                "node_id": 51,
+                "src": "303:21:1"
+              },
+              "keyword": null,
+              "keywords": [
+                {
+                  "arg": "code_offset",
+                  "ast_type": "keyword",
+                  "col_offset": 82,
+                  "end_col_offset": 95,
+                  "end_lineno": 13,
+                  "lineno": 13,
+                  "node_id": 63,
+                  "src": "368:13:1",
+                  "value": {
+                    "ast_type": "Int",
+                    "col_offset": 94,
+                    "end_col_offset": 95,
+                    "end_lineno": 13,
+                    "lineno": 13,
+                    "node_id": 64,
+                    "src": "380:1:1",
+                    "value": 3
+                  }
+                }
+              ],
+              "lineno": 13,
+              "node_id": 50,
+              "src": "303:79:1"
+            }
+          },
+          {
+            "ast_type": "Return",
+            "col_offset": 4,
+            "end_col_offset": 19,
+            "end_lineno": 14,
+            "lineno": 14,
+            "node_id": 65,
+            "src": "387:15:1",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 17,
+                  "end_col_offset": 18,
+                  "end_lineno": 14,
+                  "id": "t",
+                  "lineno": 14,
+                  "node_id": 69,
+                  "src": "400:1:1"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 11,
+              "end_col_offset": 19,
+              "end_lineno": 14,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 16,
+                "end_lineno": 14,
+                "id": "ERC20",
+                "lineno": 14,
+                "node_id": 67,
+                "src": "394:5:1"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 14,
+              "node_id": 66,
+              "src": "394:8:1"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 11,
+            "id": "external",
+            "lineno": 11,
+            "node_id": 71,
+            "src": "174:8:1"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 19,
+        "end_lineno": 14,
+        "lineno": 12,
+        "name": "create_new_erc20",
+        "node_id": 23,
+        "pos": null,
+        "returns": {
+          "ast_type": "Name",
+          "col_offset": 96,
+          "end_col_offset": 101,
+          "end_lineno": 12,
+          "id": "ERC20",
+          "lineno": 12,
+          "node_id": 73,
+          "src": "279:5:1"
+        },
+        "src": "183:219:1"
+      }
+    ],
+    "col_offset": 0,
+    "doc_string": null,
+    "end_col_offset": 19,
+    "end_lineno": 14,
+    "lineno": 1,
+    "name": "contracts/tests/Factory.vy",
+    "node_id": 0,
+    "src": "0:402:1"
+  },
+  "bytecode": "0x60206101bb6000396000518060a01c6101b657604052346101b65760405161018252610182610033610000396101a2610000f36003361161000c5761016a565b60003560e01c346101705763c2068dbf81186101685760c436106101705760043560040160208135116101705780358060405260208201803560605250505060243560040160208135116101705780358060805260208201803560a0525050506044358060081c6101705760c052602061018260003960005160808061014052806101400160405180825260208201606051815250508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101605280610140016080518082526020820160a051815250508051806020830101601f82600003163682375050601f19601f8251602001011690508101905060c05161010052610100516101805260643561012052610120516101a0526003823b0359600182126101705781600382863c81810183818561014060045afa5050828201816000f0801561017057905090509050905060e052602060e0f35b505b60006000fd5b600080fda165767970657283000307000b005b600080fd",
+  "bytecodeSha1": "57130314a1a3d8d1e1d79db7a296ed9be3447a92",
+  "compiler": {
+    "evm_version": "istanbul",
+    "version": "0.3.7"
+  },
+  "contractName": "Factory",
+  "coverageMap": {
+    "branches": {
+      "0": {}
+    },
+    "statements": {
+      "0": {
+        "Factory.create_new_erc20": {
+          "0": [
+            290,
+            382
+          ],
+          "1": [
+            387,
+            402
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [],
+  "deployedBytecode": "0x6003361161000c5761016a565b60003560e01c346101705763c2068dbf81186101685760c436106101705760043560040160208135116101705780358060405260208201803560605250505060243560040160208135116101705780358060805260208201803560a0525050506044358060081c6101705760c052602061018260003960005160808061014052806101400160405180825260208201606051815250508051806020830101601f82600003163682375050601f19601f82516020010116905081019050806101605280610140016080518082526020820160a051815250508051806020830101601f82600003163682375050601f19601f8251602001011690508101905060c05161010052610100516101805260643561012052610120516101a0526003823b0359600182126101705781600382863c81810183818561014060045afa5050828201816000f0801561017057905090509050905060e052602060e0f35b505b60006000fd5b600080fda165767970657283000307000b",
+  "deployedSourceMap": "-1:-1:1:-;;;;:::-;;:::-;:::-;;;;;;;:::-;;;;;:::-;;;;;:::-;;;;204:16;-1:-1;204:16;-1:-1;;;:::-;204:16;-1:-1;;;;;204:16;-1:-1;;;;;;;204:16;-1:-1;;;222:18;-1:-1;222:18;-1:-1;;;:::-;222:18;-1:-1;;;;;222:18;-1:-1;;;;;;;222:18;-1:-1;;;;;;:::-;242:15;;303:79;;;;;;;-1:-1;;;;;;;336:4;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;342:6;-1:-1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;350:8;-1:-1;;;;;;;360:6;-1:-1;;;;;;;380:1;303:79;-1:-1;;;;;;;:::-;;380:1;-1:-1;303:79;-1:-1;;;;;;;;;;;;;;;;;;;;;;:::-;;;;;303:79;;;;290:92;;-1:-1;394:8;-1:-1;:::-;;:::-;;;;:::-;;;",
+  "language": "Vyper",
+  "natspec": {
+    "methods": {}
+  },
+  "offset": [
+    0,
+    402
+  ],
+  "opcodes": "PUSH1 0x3 CALLDATASIZE GT PUSH2 0x0C JUMPI PUSH2 0x16A JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR CALLVALUE PUSH2 0x170 JUMPI PUSH4 0xC268DBF DUP2 XOR PUSH2 0x168 JUMPI PUSH1 0xC4 CALLDATASIZE LT PUSH2 0x170 JUMPI PUSH1 0x4 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x20 DUP2 CALLDATALOAD GT PUSH2 0x170 JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0x40 MSTORE PUSH1 0x20 DUP3 ADD DUP1 CALLDATALOAD PUSH1 0x60 MSTORE POP POP POP PUSH1 0x24 CALLDATALOAD PUSH1 0x4 ADD PUSH1 0x20 DUP2 CALLDATALOAD GT PUSH2 0x170 JUMPI DUP1 CALLDATALOAD DUP1 PUSH1 0x80 MSTORE PUSH1 0x20 DUP3 ADD DUP1 CALLDATALOAD PUSH1 0xA0 MSTORE POP POP POP PUSH1 0x44 CALLDATALOAD DUP1 PUSH1 0x8 SHR PUSH2 0x170 JUMPI PUSH1 0xC0 MSTORE PUSH1 0x20 PUSH2 0x182 PUSH1 0x0 CODECOPY PUSH1 0x0 MLOAD PUSH1 0x80 DUP1 PUSH2 0x140 MSTORE DUP1 PUSH2 0x140 ADD PUSH1 0x40 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD PUSH1 0x60 MLOAD DUP2 MSTORE POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP DUP1 PUSH2 0x160 MSTORE DUP1 PUSH2 0x140 ADD PUSH1 0x80 MLOAD DUP1 DUP3 MSTORE PUSH1 0x20 DUP3 ADD PUSH1 0xA0 MLOAD DUP2 MSTORE POP POP DUP1 MLOAD DUP1 PUSH1 0x20 DUP4 ADD ADD PUSH1 0x1F DUP3 PUSH1 0x0 SUB AND CALLDATASIZE DUP3 CALLDATACOPY POP POP PUSH1 0x1F NOT PUSH1 0x1F DUP3 MLOAD PUSH1 0x20 ADD ADD AND SWAP1 POP DUP2 ADD SWAP1 POP PUSH1 0xC0 MLOAD PUSH2 0x10 MSTORE PUSH2 0x10 MLOAD PUSH2 0x180 MSTORE PUSH1 0x64 CALLDATALOAD PUSH2 0x120 MSTORE PUSH2 0x120 MLOAD PUSH2 0x1A0 MSTORE PUSH1 0x3 DUP3 EXTCODESIZE SUB MSIZE PUSH1 0x1 DUP3 SLT PUSH2 0x170 JUMPI DUP2 PUSH1 0x3 DUP3 DUP7 EXTCODECOPY DUP2 DUP2 ADD DUP4 DUP2 DUP6 PUSH2 0x140 PUSH1 0x4 GAS STATICCALL POP POP DUP3 DUP3 ADD DUP2 PUSH1 0x0 CREATE DUP1 ISZERO PUSH2 0x170 JUMPI SWAP1 POP SWAP1 POP SWAP1 POP SWAP1 POP PUSH1 0xE0 MSTORE PUSH1 0x20 PUSH1 0xE0 RETURN JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP1 REVERT LOG1 PUSH6 0x767970657283 STOP SUB SMOD STOP SIGNEXTEND",
+  "pcMap": {
+    "0": {
+      "offset": [
+        0,
+        402
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "2": {
+      "op": "CALLDATASIZE"
+    },
+    "3": {
+      "op": "GT"
+    },
+    "4": {
+      "op": "PUSH2",
+      "value": "0x0C"
+    },
+    "7": {
+      "op": "JUMPI"
+    },
+    "8": {
+      "op": "PUSH2",
+      "value": "0x16A"
+    },
+    "11": {
+      "op": "JUMP"
+    },
+    "12": {
+      "op": "JUMPDEST"
+    },
+    "13": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "15": {
+      "op": "CALLDATALOAD"
+    },
+    "16": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "18": {
+      "op": "SHR"
+    },
+    "19": {
+      "op": "CALLVALUE"
+    },
+    "20": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "23": {
+      "op": "JUMPI"
+    },
+    "24": {
+      "op": "PUSH4",
+      "value": "0xC268DBF"
+    },
+    "29": {
+      "op": "DUP2"
+    },
+    "30": {
+      "op": "XOR"
+    },
+    "31": {
+      "op": "PUSH2",
+      "value": "0x168"
+    },
+    "34": {
+      "op": "JUMPI"
+    },
+    "35": {
+      "op": "PUSH1",
+      "value": "0xC4"
+    },
+    "37": {
+      "op": "CALLDATASIZE"
+    },
+    "38": {
+      "op": "LT"
+    },
+    "39": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "42": {
+      "op": "JUMPI"
+    },
+    "43": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "45": {
+      "op": "CALLDATALOAD"
+    },
+    "46": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "48": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        204,
+        220
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "49": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "51": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        204,
+        220
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "52": {
+      "op": "CALLDATALOAD"
+    },
+    "53": {
+      "op": "GT"
+    },
+    "54": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "57": {
+      "op": "JUMPI"
+    },
+    "58": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        204,
+        220
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "59": {
+      "op": "CALLDATALOAD"
+    },
+    "60": {
+      "op": "DUP1"
+    },
+    "61": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "63": {
+      "op": "MSTORE"
+    },
+    "64": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "66": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        204,
+        220
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "67": {
+      "op": "ADD"
+    },
+    "68": {
+      "op": "DUP1"
+    },
+    "69": {
+      "op": "CALLDATALOAD"
+    },
+    "70": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "72": {
+      "op": "MSTORE"
+    },
+    "73": {
+      "op": "POP"
+    },
+    "74": {
+      "op": "POP"
+    },
+    "75": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        204,
+        220
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "76": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "78": {
+      "op": "CALLDATALOAD"
+    },
+    "79": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "81": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        222,
+        240
+      ],
+      "op": "ADD",
+      "path": "0"
+    },
+    "82": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "84": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        222,
+        240
+      ],
+      "op": "DUP2",
+      "path": "0"
+    },
+    "85": {
+      "op": "CALLDATALOAD"
+    },
+    "86": {
+      "op": "GT"
+    },
+    "87": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "90": {
+      "op": "JUMPI"
+    },
+    "91": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        222,
+        240
+      ],
+      "op": "DUP1",
+      "path": "0"
+    },
+    "92": {
+      "op": "CALLDATALOAD"
+    },
+    "93": {
+      "op": "DUP1"
+    },
+    "94": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "96": {
+      "op": "MSTORE"
+    },
+    "97": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "99": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        222,
+        240
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "100": {
+      "op": "ADD"
+    },
+    "101": {
+      "op": "DUP1"
+    },
+    "102": {
+      "op": "CALLDATALOAD"
+    },
+    "103": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "105": {
+      "op": "MSTORE"
+    },
+    "106": {
+      "op": "POP"
+    },
+    "107": {
+      "op": "POP"
+    },
+    "108": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        222,
+        240
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "109": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "111": {
+      "op": "CALLDATALOAD"
+    },
+    "112": {
+      "op": "DUP1"
+    },
+    "113": {
+      "op": "PUSH1",
+      "value": "0x8"
+    },
+    "115": {
+      "op": "SHR"
+    },
+    "116": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "119": {
+      "op": "JUMPI"
+    },
+    "120": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        242,
+        257
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xC0"
+    },
+    "122": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        242,
+        257
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "123": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x20"
+    },
+    "125": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x182"
+    },
+    "128": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "130": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "CODECOPY",
+      "path": "0"
+    },
+    "131": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "133": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "134": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "136": {
+      "op": "DUP1"
+    },
+    "137": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "140": {
+      "op": "MSTORE"
+    },
+    "141": {
+      "op": "DUP1"
+    },
+    "142": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "145": {
+      "op": "ADD"
+    },
+    "146": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "148": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        336,
+        340
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "149": {
+      "op": "DUP1"
+    },
+    "150": {
+      "op": "DUP3"
+    },
+    "151": {
+      "op": "MSTORE"
+    },
+    "152": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "154": {
+      "op": "DUP3"
+    },
+    "155": {
+      "op": "ADD"
+    },
+    "156": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "158": {
+      "op": "MLOAD"
+    },
+    "159": {
+      "op": "DUP2"
+    },
+    "160": {
+      "op": "MSTORE"
+    },
+    "161": {
+      "op": "POP"
+    },
+    "162": {
+      "op": "POP"
+    },
+    "163": {
+      "op": "DUP1"
+    },
+    "164": {
+      "op": "MLOAD"
+    },
+    "165": {
+      "op": "DUP1"
+    },
+    "166": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "168": {
+      "op": "DUP4"
+    },
+    "169": {
+      "op": "ADD"
+    },
+    "170": {
+      "op": "ADD"
+    },
+    "171": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "173": {
+      "op": "DUP3"
+    },
+    "174": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "176": {
+      "op": "SUB"
+    },
+    "177": {
+      "op": "AND"
+    },
+    "178": {
+      "op": "CALLDATASIZE"
+    },
+    "179": {
+      "op": "DUP3"
+    },
+    "180": {
+      "op": "CALLDATACOPY"
+    },
+    "181": {
+      "op": "POP"
+    },
+    "182": {
+      "op": "POP"
+    },
+    "183": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "185": {
+      "op": "NOT"
+    },
+    "186": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "188": {
+      "op": "DUP3"
+    },
+    "189": {
+      "op": "MLOAD"
+    },
+    "190": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "192": {
+      "op": "ADD"
+    },
+    "193": {
+      "op": "ADD"
+    },
+    "194": {
+      "op": "AND"
+    },
+    "195": {
+      "op": "SWAP1"
+    },
+    "196": {
+      "op": "POP"
+    },
+    "197": {
+      "op": "DUP2"
+    },
+    "198": {
+      "op": "ADD"
+    },
+    "199": {
+      "op": "SWAP1"
+    },
+    "200": {
+      "op": "POP"
+    },
+    "201": {
+      "op": "DUP1"
+    },
+    "202": {
+      "op": "PUSH2",
+      "value": "0x160"
+    },
+    "205": {
+      "op": "MSTORE"
+    },
+    "206": {
+      "op": "DUP1"
+    },
+    "207": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "210": {
+      "op": "ADD"
+    },
+    "211": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "213": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        342,
+        348
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "214": {
+      "op": "DUP1"
+    },
+    "215": {
+      "op": "DUP3"
+    },
+    "216": {
+      "op": "MSTORE"
+    },
+    "217": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "219": {
+      "op": "DUP3"
+    },
+    "220": {
+      "op": "ADD"
+    },
+    "221": {
+      "op": "PUSH1",
+      "value": "0xA0"
+    },
+    "223": {
+      "op": "MLOAD"
+    },
+    "224": {
+      "op": "DUP2"
+    },
+    "225": {
+      "op": "MSTORE"
+    },
+    "226": {
+      "op": "POP"
+    },
+    "227": {
+      "op": "POP"
+    },
+    "228": {
+      "op": "DUP1"
+    },
+    "229": {
+      "op": "MLOAD"
+    },
+    "230": {
+      "op": "DUP1"
+    },
+    "231": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "233": {
+      "op": "DUP4"
+    },
+    "234": {
+      "op": "ADD"
+    },
+    "235": {
+      "op": "ADD"
+    },
+    "236": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "238": {
+      "op": "DUP3"
+    },
+    "239": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "241": {
+      "op": "SUB"
+    },
+    "242": {
+      "op": "AND"
+    },
+    "243": {
+      "op": "CALLDATASIZE"
+    },
+    "244": {
+      "op": "DUP3"
+    },
+    "245": {
+      "op": "CALLDATACOPY"
+    },
+    "246": {
+      "op": "POP"
+    },
+    "247": {
+      "op": "POP"
+    },
+    "248": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "250": {
+      "op": "NOT"
+    },
+    "251": {
+      "op": "PUSH1",
+      "value": "0x1F"
+    },
+    "253": {
+      "op": "DUP3"
+    },
+    "254": {
+      "op": "MLOAD"
+    },
+    "255": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "257": {
+      "op": "ADD"
+    },
+    "258": {
+      "op": "ADD"
+    },
+    "259": {
+      "op": "AND"
+    },
+    "260": {
+      "op": "SWAP1"
+    },
+    "261": {
+      "op": "POP"
+    },
+    "262": {
+      "op": "DUP2"
+    },
+    "263": {
+      "op": "ADD"
+    },
+    "264": {
+      "op": "SWAP1"
+    },
+    "265": {
+      "op": "POP"
+    },
+    "266": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "268": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        350,
+        358
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "269": {
+      "op": "PUSH2",
+      "value": "0x10"
+    },
+    "272": {
+      "op": "MSTORE"
+    },
+    "273": {
+      "op": "PUSH2",
+      "value": "0x10"
+    },
+    "276": {
+      "op": "MLOAD"
+    },
+    "277": {
+      "op": "PUSH2",
+      "value": "0x180"
+    },
+    "280": {
+      "op": "MSTORE"
+    },
+    "281": {
+      "op": "PUSH1",
+      "value": "0x64"
+    },
+    "283": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        360,
+        366
+      ],
+      "op": "CALLDATALOAD",
+      "path": "0"
+    },
+    "284": {
+      "op": "PUSH2",
+      "value": "0x120"
+    },
+    "287": {
+      "op": "MSTORE"
+    },
+    "288": {
+      "op": "PUSH2",
+      "value": "0x120"
+    },
+    "291": {
+      "op": "MLOAD"
+    },
+    "292": {
+      "op": "PUSH2",
+      "value": "0x1A0"
+    },
+    "295": {
+      "op": "MSTORE"
+    },
+    "296": {
+      "op": "PUSH1",
+      "value": "0x3"
+    },
+    "298": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        380,
+        381
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "299": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "EXTCODESIZE",
+      "path": "0"
+    },
+    "300": {
+      "op": "SUB"
+    },
+    "301": {
+      "op": "MSIZE"
+    },
+    "302": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "304": {
+      "op": "DUP3"
+    },
+    "305": {
+      "op": "SLT"
+    },
+    "306": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "309": {
+      "op": "JUMPI"
+    },
+    "310": {
+      "op": "DUP2"
+    },
+    "311": {
+      "op": "PUSH1",
+      "value": "0x3"
+    },
+    "313": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        380,
+        381
+      ],
+      "op": "DUP3",
+      "path": "0"
+    },
+    "314": {
+      "op": "DUP7"
+    },
+    "315": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "EXTCODECOPY",
+      "path": "0"
+    },
+    "316": {
+      "op": "DUP2"
+    },
+    "317": {
+      "op": "DUP2"
+    },
+    "318": {
+      "op": "ADD"
+    },
+    "319": {
+      "op": "DUP4"
+    },
+    "320": {
+      "op": "DUP2"
+    },
+    "321": {
+      "op": "DUP6"
+    },
+    "322": {
+      "op": "PUSH2",
+      "value": "0x140"
+    },
+    "325": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "327": {
+      "op": "GAS"
+    },
+    "328": {
+      "op": "STATICCALL"
+    },
+    "329": {
+      "op": "POP"
+    },
+    "330": {
+      "op": "POP"
+    },
+    "331": {
+      "op": "DUP3"
+    },
+    "332": {
+      "op": "DUP3"
+    },
+    "333": {
+      "op": "ADD"
+    },
+    "334": {
+      "op": "DUP2"
+    },
+    "335": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "337": {
+      "op": "CREATE"
+    },
+    "338": {
+      "op": "DUP1"
+    },
+    "339": {
+      "op": "ISZERO"
+    },
+    "340": {
+      "op": "PUSH2",
+      "value": "0x170"
+    },
+    "343": {
+      "op": "JUMPI"
+    },
+    "344": {
+      "op": "SWAP1"
+    },
+    "345": {
+      "op": "POP"
+    },
+    "346": {
+      "op": "SWAP1"
+    },
+    "347": {
+      "op": "POP"
+    },
+    "348": {
+      "op": "SWAP1"
+    },
+    "349": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "350": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "SWAP1",
+      "path": "0"
+    },
+    "351": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "352": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        303,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xE0"
+    },
+    "354": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        290,
+        382
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "355": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        290,
+        382
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "357": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "359": {
+      "fn": "Factory.create_new_erc20",
+      "offset": [
+        394,
+        402
+      ],
+      "op": "RETURN",
+      "path": "0",
+      "statement": 1
+    },
+    "360": {
+      "op": "JUMPDEST"
+    },
+    "361": {
+      "op": "POP"
+    },
+    "362": {
+      "op": "JUMPDEST"
+    },
+    "363": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "365": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "367": {
+      "op": "REVERT"
+    },
+    "368": {
+      "op": "JUMPDEST"
+    },
+    "369": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "371": {
+      "op": "DUP1"
+    },
+    "372": {
+      "op": "REVERT"
+    },
+    "373": {
+      "op": "LOG1"
+    }
+  },
+  "sha1": "699f1fb69bec9fbb59ddb72b65388ab9b2a3ee9b",
+  "source": "# @version ^0.3.7\n\nfrom vyper.interfaces import ERC20\n\nBLUEPRINT: immutable(address)\n\n@external\ndef __init__(blueprint_address: address):\n    BLUEPRINT = blueprint_address\n\n@external\ndef create_new_erc20(name: String[32], symbol: String[32], decimals: uint8, supply: uint256) -> ERC20:\n    t: address = create_from_blueprint(BLUEPRINT, name, symbol, decimals, supply, code_offset=3)\n    return ERC20(t)",
+  "sourceMap": "",
+  "sourcePath": "contracts/tests/Factory.vy",
+  "type": "contract"
+}

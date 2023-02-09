@@ -1,0 +1,1379 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "burner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_stablecoinAddress",
+          "type": "address"
+        }
+      ],
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "allSourcePaths": {
+    "0": "contracts/Burner.vy"
+  },
+  "ast": {
+    "ast_type": "Module",
+    "body": [
+      {
+        "alias": "Token",
+        "ast_type": "Import",
+        "col_offset": 0,
+        "end_col_offset": 21,
+        "end_lineno": 7,
+        "lineno": 7,
+        "name": "Token",
+        "node_id": 3,
+        "src": "62:21:0"
+      },
+      {
+        "ast_type": "EventDef",
+        "body": [
+          {
+            "annotation": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 20,
+                  "end_col_offset": 27,
+                  "end_lineno": 10,
+                  "id": "address",
+                  "lineno": 10,
+                  "node_id": 12,
+                  "src": "117:7:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 12,
+              "end_col_offset": 28,
+              "end_lineno": 10,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 12,
+                "end_col_offset": 19,
+                "end_lineno": 10,
+                "id": "indexed",
+                "lineno": 10,
+                "node_id": 10,
+                "src": "109:7:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 10,
+              "node_id": 9,
+              "src": "109:16:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 28,
+            "end_lineno": 10,
+            "lineno": 10,
+            "node_id": 6,
+            "simple": 1,
+            "src": "101:24:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 10,
+              "end_lineno": 10,
+              "id": "burner",
+              "lineno": 10,
+              "node_id": 7,
+              "src": "101:6:0"
+            },
+            "value": null
+          },
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 11,
+              "end_col_offset": 18,
+              "end_lineno": 11,
+              "id": "uint256",
+              "lineno": 11,
+              "node_id": 17,
+              "src": "137:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 18,
+            "end_lineno": 11,
+            "lineno": 11,
+            "node_id": 14,
+            "simple": 1,
+            "src": "130:14:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 9,
+              "end_lineno": 11,
+              "id": "value",
+              "lineno": 11,
+              "node_id": 15,
+              "src": "130:5:0"
+            },
+            "value": null
+          }
+        ],
+        "col_offset": 0,
+        "end_col_offset": 18,
+        "end_lineno": 11,
+        "lineno": 9,
+        "name": "Burn",
+        "node_id": 5,
+        "src": "85:59:0"
+      },
+      {
+        "annotation": {
+          "ast_type": "Name",
+          "col_offset": 22,
+          "end_col_offset": 27,
+          "end_lineno": 13,
+          "id": "Token",
+          "lineno": 13,
+          "node_id": 25,
+          "src": "168:5:0"
+        },
+        "ast_type": "VariableDecl",
+        "col_offset": 0,
+        "end_col_offset": 28,
+        "end_lineno": 13,
+        "is_constant": false,
+        "is_immutable": true,
+        "is_public": false,
+        "lineno": 13,
+        "node_id": 19,
+        "src": "146:28:0",
+        "target": {
+          "ast_type": "Name",
+          "col_offset": 0,
+          "end_col_offset": 10,
+          "end_lineno": 13,
+          "id": "stablecoin",
+          "lineno": 13,
+          "node_id": 20,
+          "src": "146:10:0"
+        },
+        "value": null
+      },
+      {
+        "args": {
+          "args": [
+            {
+              "annotation": {
+                "ast_type": "Name",
+                "col_offset": 33,
+                "end_col_offset": 40,
+                "end_lineno": 17,
+                "id": "address",
+                "lineno": 17,
+                "node_id": 30,
+                "src": "220:7:0"
+              },
+              "arg": "_stablecoinAddress",
+              "ast_type": "arg",
+              "col_offset": 13,
+              "end_col_offset": 40,
+              "end_lineno": 17,
+              "lineno": 17,
+              "node_id": 29,
+              "src": "200:27:0"
+            }
+          ],
+          "ast_type": "arguments",
+          "col_offset": 13,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 40,
+          "end_lineno": 17,
+          "lineno": 17,
+          "node_id": 28,
+          "src": "200:27:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "ast_type": "Assign",
+            "col_offset": 4,
+            "end_col_offset": 42,
+            "end_lineno": 18,
+            "lineno": 18,
+            "node_id": 32,
+            "src": "234:38:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 14,
+              "end_lineno": 18,
+              "id": "stablecoin",
+              "lineno": 18,
+              "node_id": 33,
+              "src": "234:10:0"
+            },
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 23,
+                  "end_col_offset": 41,
+                  "end_lineno": 18,
+                  "id": "_stablecoinAddress",
+                  "lineno": 18,
+                  "node_id": 38,
+                  "src": "253:18:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 17,
+              "end_col_offset": 42,
+              "end_lineno": 18,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 17,
+                "end_col_offset": 22,
+                "end_lineno": 18,
+                "id": "Token",
+                "lineno": 18,
+                "node_id": 36,
+                "src": "247:5:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 18,
+              "node_id": 35,
+              "src": "247:25:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 16,
+            "id": "external",
+            "lineno": 16,
+            "node_id": 40,
+            "src": "178:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 42,
+        "end_lineno": 18,
+        "lineno": 17,
+        "name": "__init__",
+        "node_id": 27,
+        "pos": null,
+        "returns": null,
+        "src": "187:85:0"
+      },
+      {
+        "args": {
+          "args": [],
+          "ast_type": "arguments",
+          "col_offset": 0,
+          "default": null,
+          "defaults": [],
+          "end_col_offset": 3,
+          "end_lineno": 22,
+          "lineno": 22,
+          "node_id": 43,
+          "src": "285:3:0"
+        },
+        "ast_type": "FunctionDef",
+        "body": [
+          {
+            "annotation": {
+              "ast_type": "Name",
+              "col_offset": 11,
+              "end_col_offset": 18,
+              "end_lineno": 23,
+              "id": "uint256",
+              "lineno": 23,
+              "node_id": 47,
+              "src": "308:7:0"
+            },
+            "ast_type": "AnnAssign",
+            "col_offset": 4,
+            "end_col_offset": 47,
+            "end_lineno": 23,
+            "lineno": 23,
+            "node_id": 44,
+            "simple": 1,
+            "src": "301:43:0",
+            "target": {
+              "ast_type": "Name",
+              "col_offset": 4,
+              "end_col_offset": 9,
+              "end_lineno": 23,
+              "id": "value",
+              "lineno": 23,
+              "node_id": 45,
+              "src": "301:5:0"
+            },
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 42,
+                  "end_col_offset": 46,
+                  "end_lineno": 23,
+                  "id": "self",
+                  "lineno": 23,
+                  "node_id": 54,
+                  "src": "339:4:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 21,
+              "end_col_offset": 47,
+              "end_lineno": 23,
+              "func": {
+                "ast_type": "Attribute",
+                "attr": "balanceOf",
+                "col_offset": 21,
+                "end_col_offset": 41,
+                "end_lineno": 23,
+                "lineno": 23,
+                "node_id": 50,
+                "src": "318:20:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 21,
+                  "end_col_offset": 31,
+                  "end_lineno": 23,
+                  "id": "stablecoin",
+                  "lineno": 23,
+                  "node_id": 51,
+                  "src": "318:10:0"
+                }
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 23,
+              "node_id": 49,
+              "src": "318:26:0"
+            }
+          },
+          {
+            "ast_type": "Assert",
+            "col_offset": 4,
+            "end_col_offset": 20,
+            "end_lineno": 24,
+            "lineno": 24,
+            "msg": null,
+            "node_id": 56,
+            "src": "349:16:0",
+            "test": {
+              "ast_type": "Compare",
+              "col_offset": 11,
+              "end_col_offset": 20,
+              "end_lineno": 24,
+              "left": {
+                "ast_type": "Name",
+                "col_offset": 11,
+                "end_col_offset": 16,
+                "end_lineno": 24,
+                "id": "value",
+                "lineno": 24,
+                "node_id": 58,
+                "src": "356:5:0"
+              },
+              "lineno": 24,
+              "node_id": 57,
+              "op": {
+                "ast_type": "Gt",
+                "col_offset": 11,
+                "end_col_offset": 20,
+                "end_lineno": 24,
+                "lineno": 24,
+                "node_id": 60,
+                "src": "356:9:0"
+              },
+              "right": {
+                "ast_type": "Int",
+                "col_offset": 19,
+                "end_col_offset": 20,
+                "end_lineno": 24,
+                "lineno": 24,
+                "node_id": 61,
+                "src": "364:1:0",
+                "value": 0
+              },
+              "src": "356:9:0"
+            }
+          },
+          {
+            "ast_type": "Expr",
+            "col_offset": 4,
+            "end_col_offset": 36,
+            "end_lineno": 25,
+            "lineno": 25,
+            "node_id": 62,
+            "src": "370:32:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Name",
+                  "col_offset": 24,
+                  "end_col_offset": 28,
+                  "end_lineno": 25,
+                  "id": "self",
+                  "lineno": 25,
+                  "node_id": 68,
+                  "src": "390:4:0"
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 30,
+                  "end_col_offset": 35,
+                  "end_lineno": 25,
+                  "id": "value",
+                  "lineno": 25,
+                  "node_id": 70,
+                  "src": "396:5:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 4,
+              "end_col_offset": 36,
+              "end_lineno": 25,
+              "func": {
+                "ast_type": "Attribute",
+                "attr": "burnFrom",
+                "col_offset": 4,
+                "end_col_offset": 23,
+                "end_lineno": 25,
+                "lineno": 25,
+                "node_id": 64,
+                "src": "370:19:0",
+                "value": {
+                  "ast_type": "Name",
+                  "col_offset": 4,
+                  "end_col_offset": 14,
+                  "end_lineno": 25,
+                  "id": "stablecoin",
+                  "lineno": 25,
+                  "node_id": 65,
+                  "src": "370:10:0"
+                }
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 25,
+              "node_id": 63,
+              "src": "370:32:0"
+            }
+          },
+          {
+            "ast_type": "Log",
+            "col_offset": 4,
+            "end_col_offset": 31,
+            "end_lineno": 26,
+            "lineno": 26,
+            "node_id": 73,
+            "src": "407:27:0",
+            "value": {
+              "args": [
+                {
+                  "ast_type": "Attribute",
+                  "attr": "sender",
+                  "col_offset": 13,
+                  "end_col_offset": 23,
+                  "end_lineno": 26,
+                  "lineno": 26,
+                  "node_id": 77,
+                  "src": "416:10:0",
+                  "value": {
+                    "ast_type": "Name",
+                    "col_offset": 13,
+                    "end_col_offset": 16,
+                    "end_lineno": 26,
+                    "id": "msg",
+                    "lineno": 26,
+                    "node_id": 78,
+                    "src": "416:3:0"
+                  }
+                },
+                {
+                  "ast_type": "Name",
+                  "col_offset": 25,
+                  "end_col_offset": 30,
+                  "end_lineno": 26,
+                  "id": "value",
+                  "lineno": 26,
+                  "node_id": 81,
+                  "src": "428:5:0"
+                }
+              ],
+              "ast_type": "Call",
+              "col_offset": 8,
+              "end_col_offset": 31,
+              "end_lineno": 26,
+              "func": {
+                "ast_type": "Name",
+                "col_offset": 8,
+                "end_col_offset": 12,
+                "end_lineno": 26,
+                "id": "Burn",
+                "lineno": 26,
+                "node_id": 75,
+                "src": "411:4:0"
+              },
+              "keyword": null,
+              "keywords": [],
+              "lineno": 26,
+              "node_id": 74,
+              "src": "411:23:0"
+            }
+          }
+        ],
+        "col_offset": 0,
+        "decorator_list": [
+          {
+            "ast_type": "Name",
+            "col_offset": 1,
+            "end_col_offset": 9,
+            "end_lineno": 21,
+            "id": "external",
+            "lineno": 21,
+            "node_id": 83,
+            "src": "276:8:0"
+          }
+        ],
+        "doc_string": null,
+        "end_col_offset": 31,
+        "end_lineno": 26,
+        "lineno": 22,
+        "name": "burn",
+        "node_id": 42,
+        "pos": null,
+        "returns": null,
+        "src": "285:149:0"
+      }
+    ],
+    "col_offset": 0,
+    "doc_string": {
+      "ast_type": "DocStr",
+      "col_offset": 0,
+      "end_col_offset": 3,
+      "end_lineno": 5,
+      "lineno": 3,
+      "node_id": 85,
+      "src": "19:41:0",
+      "value": "\n@title Safe Burner of Stablecoins\n"
+    },
+    "end_col_offset": 31,
+    "end_lineno": 26,
+    "lineno": 1,
+    "name": "contracts/Burner.vy",
+    "node_id": 0,
+    "src": "0:434:0"
+  },
+  "bytecode": "0x60206101486000396000518060a01c61014357604052346101435760405161010f5261010f6100336100003961012f610000f36003361161000c576100f7565b60003560e01c346100fd576344df8e7081186100f557600436106100fd57602061010f6000396000516370a0823160605230608052602060606024607c845afa61005b573d600060003e3d6000fd5b60203d106100fd576060905051604052604051156100fd57602061010f6000396000516379cc67906060523060805260405160a052602060606044607c6000855af16100ac573d600060003e3d6000fd5b60203d106100fd576060518060011c6100fd5760c05260c05050337fcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca560405160605260206060a2005b505b60006000fd5b600080fda165767970657283000307000b005b600080fd",
+  "bytecodeSha1": "5cb16d3e720af77b4c216d464565f78a71527dce",
+  "compiler": {
+    "evm_version": "istanbul",
+    "version": "0.3.7"
+  },
+  "contractName": "Burner",
+  "coverageMap": {
+    "branches": {
+      "0": {
+        "Burner.burn": {
+          "2": [
+            349,
+            365,
+            true
+          ]
+        }
+      }
+    },
+    "statements": {
+      "0": {
+        "Burner.burn": {
+          "0": [
+            301,
+            344
+          ],
+          "1": [
+            349,
+            365
+          ],
+          "3": [
+            370,
+            402
+          ],
+          "4": [
+            407,
+            434
+          ]
+        }
+      }
+    }
+  },
+  "dependencies": [
+    "Token"
+  ],
+  "deployedBytecode": "0x6003361161000c576100f7565b60003560e01c346100fd576344df8e7081186100f557600436106100fd57602061010f6000396000516370a0823160605230608052602060606024607c845afa61005b573d600060003e3d6000fd5b60203d106100fd576060905051604052604051156100fd57602061010f6000396000516379cc67906060523060805260405160a052602060606044607c6000855af16100ac573d600060003e3d6000fd5b60203d106100fd576060518060011c6100fd5760c05260c05050337fcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca560405160605260206060a2005b505b60006000fd5b600080fda165767970657283000307000b",
+  "deployedSourceMap": "-1:-1:0:-;;;;:::-;;:::-;:::-;;;;;;;:::-;;;;;:::-;;;;;:::-;318:26;;;;;;;-1:-1;;;339:4;-1:-1;;;;;;318:26;-1:-1;;;:::-;;;;;;;;:::-;;;;;:::-;;318:26;;301:43;;;356:5;:9;;349:16;:::-;370:32;;;;;;;-1:-1;;;390:4;-1:-1;;396:5;-1:-1;;;;;;;;370:32;-1:-1;;;:::-;;;;;;;;:::-;;;;;:::-;;;;;;;:::-;;;;370:32;-1:-1;416:10;407:27;428:5;-1:-1;;;;407:27;;-1:-1;:::-;;:::-;;;;:::-;;;",
+  "language": "Vyper",
+  "natspec": {
+    "methods": {},
+    "title": "Safe Burner of Stablecoins"
+  },
+  "offset": [
+    0,
+    434
+  ],
+  "opcodes": "PUSH1 0x3 CALLDATASIZE GT PUSH2 0x0C JUMPI PUSH2 0x0F7 JUMP JUMPDEST PUSH1 0x0 CALLDATALOAD PUSH1 0xE0 SHR CALLVALUE PUSH2 0x0FD JUMPI PUSH4 0x44DF8E70 DUP2 XOR PUSH2 0x0F5 JUMPI PUSH1 0x4 CALLDATASIZE LT PUSH2 0x0FD JUMPI PUSH1 0x20 PUSH2 0x1F PUSH1 0x0 CODECOPY PUSH1 0x0 MLOAD PUSH4 0x70A08231 PUSH1 0x60 MSTORE ADDRESS PUSH1 0x80 MSTORE PUSH1 0x20 PUSH1 0x60 PUSH1 0x24 PUSH1 0x7C DUP5 GAS STATICCALL PUSH2 0x05B JUMPI RETURNDATASIZE PUSH1 0x0 PUSH1 0x0 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST PUSH1 0x20 RETURNDATASIZE LT PUSH2 0x0FD JUMPI PUSH1 0x60 SWAP1 POP MLOAD PUSH1 0x40 MSTORE PUSH1 0x40 MLOAD ISZERO PUSH2 0x0FD JUMPI PUSH1 0x20 PUSH2 0x1F PUSH1 0x0 CODECOPY PUSH1 0x0 MLOAD PUSH4 0x79CC6790 PUSH1 0x60 MSTORE ADDRESS PUSH1 0x80 MSTORE PUSH1 0x40 MLOAD PUSH1 0xA0 MSTORE PUSH1 0x20 PUSH1 0x60 PUSH1 0x44 PUSH1 0x7C PUSH1 0x0 DUP6 GAS CALL PUSH2 0x0AC JUMPI RETURNDATASIZE PUSH1 0x0 PUSH1 0x0 RETURNDATACOPY RETURNDATASIZE PUSH1 0x0 REVERT JUMPDEST PUSH1 0x20 RETURNDATASIZE LT PUSH2 0x0FD JUMPI PUSH1 0x60 MLOAD DUP1 PUSH1 0x1 SHR PUSH2 0x0FD JUMPI PUSH1 0xC0 MSTORE PUSH1 0xC0 POP POP CALLER PUSH32 0xCC16F5DBB4873280815C1EE09DBD6736CFFCC184412CF7A71A0FDB75D397CA5 PUSH1 0x40 MLOAD PUSH1 0x60 MSTORE PUSH1 0x20 PUSH1 0x60 LOG2 STOP JUMPDEST POP JUMPDEST PUSH1 0x0 PUSH1 0x0 REVERT JUMPDEST PUSH1 0x0 DUP1 REVERT LOG1 PUSH6 0x767970657283 STOP SUB SMOD STOP SIGNEXTEND",
+  "pcMap": {
+    "0": {
+      "offset": [
+        0,
+        434
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x3"
+    },
+    "2": {
+      "op": "CALLDATASIZE"
+    },
+    "3": {
+      "op": "GT"
+    },
+    "4": {
+      "op": "PUSH2",
+      "value": "0x0C"
+    },
+    "7": {
+      "op": "JUMPI"
+    },
+    "8": {
+      "op": "PUSH2",
+      "value": "0x0F7"
+    },
+    "11": {
+      "op": "JUMP"
+    },
+    "12": {
+      "op": "JUMPDEST"
+    },
+    "13": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "15": {
+      "op": "CALLDATALOAD"
+    },
+    "16": {
+      "op": "PUSH1",
+      "value": "0xE0"
+    },
+    "18": {
+      "op": "SHR"
+    },
+    "19": {
+      "op": "CALLVALUE"
+    },
+    "20": {
+      "op": "PUSH2",
+      "value": "0x0FD"
+    },
+    "23": {
+      "op": "JUMPI"
+    },
+    "24": {
+      "op": "PUSH4",
+      "value": "0x44DF8E70"
+    },
+    "29": {
+      "op": "DUP2"
+    },
+    "30": {
+      "op": "XOR"
+    },
+    "31": {
+      "op": "PUSH2",
+      "value": "0x0F5"
+    },
+    "34": {
+      "op": "JUMPI"
+    },
+    "35": {
+      "op": "PUSH1",
+      "value": "0x4"
+    },
+    "37": {
+      "op": "CALLDATASIZE"
+    },
+    "38": {
+      "op": "LT"
+    },
+    "39": {
+      "op": "PUSH2",
+      "value": "0x0FD"
+    },
+    "42": {
+      "op": "JUMPI"
+    },
+    "43": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 0,
+      "value": "0x20"
+    },
+    "45": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x1F"
+    },
+    "48": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "50": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "CODECOPY",
+      "path": "0"
+    },
+    "51": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "53": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "54": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x70A08231"
+    },
+    "59": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "61": {
+      "op": "MSTORE"
+    },
+    "62": {
+      "op": "ADDRESS"
+    },
+    "63": {
+      "fn": "Burner.burn",
+      "offset": [
+        339,
+        343
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x80"
+    },
+    "65": {
+      "op": "MSTORE"
+    },
+    "66": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "68": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "70": {
+      "op": "PUSH1",
+      "value": "0x24"
+    },
+    "72": {
+      "op": "PUSH1",
+      "value": "0x7C"
+    },
+    "74": {
+      "op": "DUP5"
+    },
+    "75": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "GAS",
+      "path": "0"
+    },
+    "76": {
+      "op": "STATICCALL"
+    },
+    "77": {
+      "op": "PUSH2",
+      "value": "0x05B"
+    },
+    "80": {
+      "op": "JUMPI"
+    },
+    "81": {
+      "op": "RETURNDATASIZE"
+    },
+    "82": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "84": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "86": {
+      "op": "RETURNDATACOPY"
+    },
+    "87": {
+      "op": "RETURNDATASIZE"
+    },
+    "88": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "90": {
+      "op": "REVERT"
+    },
+    "91": {
+      "op": "JUMPDEST"
+    },
+    "92": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "94": {
+      "op": "RETURNDATASIZE"
+    },
+    "95": {
+      "op": "LT"
+    },
+    "96": {
+      "op": "PUSH2",
+      "value": "0x0FD"
+    },
+    "99": {
+      "op": "JUMPI"
+    },
+    "100": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "102": {
+      "op": "SWAP1"
+    },
+    "103": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "POP",
+      "path": "0"
+    },
+    "104": {
+      "fn": "Burner.burn",
+      "offset": [
+        318,
+        344
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "105": {
+      "fn": "Burner.burn",
+      "offset": [
+        301,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "107": {
+      "fn": "Burner.burn",
+      "offset": [
+        301,
+        344
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "108": {
+      "fn": "Burner.burn",
+      "offset": [
+        301,
+        344
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x40"
+    },
+    "110": {
+      "fn": "Burner.burn",
+      "offset": [
+        356,
+        361
+      ],
+      "op": "MLOAD",
+      "path": "0",
+      "statement": 1
+    },
+    "111": {
+      "fn": "Burner.burn",
+      "offset": [
+        356,
+        365
+      ],
+      "op": "ISZERO",
+      "path": "0"
+    },
+    "112": {
+      "fn": "Burner.burn",
+      "offset": [
+        356,
+        365
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "value": "0x0FD"
+    },
+    "115": {
+      "branch": 2,
+      "fn": "Burner.burn",
+      "offset": [
+        349,
+        365
+      ],
+      "op": "JUMPI",
+      "path": "0"
+    },
+    "116": {
+      "fn": "Burner.burn",
+      "offset": [
+        349,
+        365
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x20"
+    },
+    "118": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "PUSH2",
+      "path": "0",
+      "statement": 3,
+      "value": "0x1F"
+    },
+    "121": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "123": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "CODECOPY",
+      "path": "0"
+    },
+    "124": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x0"
+    },
+    "126": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "127": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "PUSH4",
+      "path": "0",
+      "value": "0x79CC6790"
+    },
+    "132": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "134": {
+      "op": "MSTORE"
+    },
+    "135": {
+      "op": "ADDRESS"
+    },
+    "136": {
+      "op": "PUSH1",
+      "value": "0x80"
+    },
+    "138": {
+      "fn": "Burner.burn",
+      "offset": [
+        390,
+        394
+      ],
+      "op": "MSTORE",
+      "path": "0"
+    },
+    "139": {
+      "op": "PUSH1",
+      "value": "0x40"
+    },
+    "141": {
+      "op": "MLOAD"
+    },
+    "142": {
+      "fn": "Burner.burn",
+      "offset": [
+        396,
+        401
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0xA0"
+    },
+    "144": {
+      "op": "MSTORE"
+    },
+    "145": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "147": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "149": {
+      "op": "PUSH1",
+      "value": "0x44"
+    },
+    "151": {
+      "op": "PUSH1",
+      "value": "0x7C"
+    },
+    "153": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "155": {
+      "op": "DUP6"
+    },
+    "156": {
+      "op": "GAS"
+    },
+    "157": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "CALL",
+      "path": "0"
+    },
+    "158": {
+      "op": "PUSH2",
+      "value": "0x0AC"
+    },
+    "161": {
+      "op": "JUMPI"
+    },
+    "162": {
+      "op": "RETURNDATASIZE"
+    },
+    "163": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "165": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "167": {
+      "op": "RETURNDATACOPY"
+    },
+    "168": {
+      "op": "RETURNDATASIZE"
+    },
+    "169": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "171": {
+      "op": "REVERT"
+    },
+    "172": {
+      "op": "JUMPDEST"
+    },
+    "173": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "175": {
+      "op": "RETURNDATASIZE"
+    },
+    "176": {
+      "op": "LT"
+    },
+    "177": {
+      "op": "PUSH2",
+      "value": "0x0FD"
+    },
+    "180": {
+      "op": "JUMPI"
+    },
+    "181": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "183": {
+      "op": "MLOAD"
+    },
+    "184": {
+      "op": "DUP1"
+    },
+    "185": {
+      "op": "PUSH1",
+      "value": "0x1"
+    },
+    "187": {
+      "op": "SHR"
+    },
+    "188": {
+      "op": "PUSH2",
+      "value": "0x0FD"
+    },
+    "191": {
+      "op": "JUMPI"
+    },
+    "192": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "194": {
+      "op": "MSTORE"
+    },
+    "195": {
+      "op": "PUSH1",
+      "value": "0xC0"
+    },
+    "197": {
+      "op": "POP"
+    },
+    "198": {
+      "op": "POP"
+    },
+    "199": {
+      "fn": "Burner.burn",
+      "offset": [
+        370,
+        402
+      ],
+      "op": "CALLER",
+      "path": "0"
+    },
+    "200": {
+      "op": "PUSH32",
+      "value": "0xCC16F5DBB4873280815C1EE09DBD6736CFFCC184412CF7A71A0FDB75D397CA5"
+    },
+    "233": {
+      "fn": "Burner.burn",
+      "offset": [
+        416,
+        426
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "statement": 4,
+      "value": "0x40"
+    },
+    "235": {
+      "fn": "Burner.burn",
+      "offset": [
+        407,
+        434
+      ],
+      "op": "MLOAD",
+      "path": "0"
+    },
+    "236": {
+      "fn": "Burner.burn",
+      "offset": [
+        428,
+        433
+      ],
+      "op": "PUSH1",
+      "path": "0",
+      "value": "0x60"
+    },
+    "238": {
+      "op": "MSTORE"
+    },
+    "239": {
+      "op": "PUSH1",
+      "value": "0x20"
+    },
+    "241": {
+      "op": "PUSH1",
+      "value": "0x60"
+    },
+    "243": {
+      "op": "LOG2"
+    },
+    "244": {
+      "fn": "Burner.burn",
+      "offset": [
+        407,
+        434
+      ],
+      "op": "STOP",
+      "path": "0"
+    },
+    "245": {
+      "fn": "Burner.burn",
+      "offset": [
+        407,
+        434
+      ],
+      "op": "JUMPDEST",
+      "path": "0"
+    },
+    "246": {
+      "op": "POP"
+    },
+    "247": {
+      "op": "JUMPDEST"
+    },
+    "248": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "250": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "252": {
+      "op": "REVERT"
+    },
+    "253": {
+      "op": "JUMPDEST"
+    },
+    "254": {
+      "op": "PUSH1",
+      "value": "0x0"
+    },
+    "256": {
+      "op": "DUP1"
+    },
+    "257": {
+      "op": "REVERT"
+    },
+    "258": {
+      "op": "LOG1"
+    },
+    "259": {
+      "op": "PUSH6",
+      "value": "0x767970657283"
+    }
+  },
+  "sha1": "50ec6c9b004b73791b6d96bb7b86628a643ad71f",
+  "source": "# @version ^0.3.7\n\n\"\"\"\n@title Safe Burner of Stablecoins\n\"\"\"\n\nimport Token as Token\n\nevent Burn:\n    burner: indexed(address)\n    value: uint256\n\nstablecoin: immutable(Token)\n\n\n@external\ndef __init__(_stablecoinAddress: address):\n    stablecoin = Token(_stablecoinAddress)\n\n\n@external\ndef burn():\n    value: uint256 = stablecoin.balanceOf(self)\n    assert value > 0\n    stablecoin.burnFrom(self, value)\n    log Burn(msg.sender, value)",
+  "sourceMap": "",
+  "sourcePath": "contracts/Burner.vy",
+  "type": "contract"
+}
