@@ -48,7 +48,7 @@ isShutdown: public(bool)
 MAX_BPS: constant(uint256) = 10000
 
 burner: public(address)
-controller: public(address)
+governance: public(address)
 
 
 @external
@@ -69,7 +69,7 @@ def __init__(_collateralAddress: address,
     defaultMinCollateralValue = _defaultMinCollateralValue
     whitelistEnabled = _whitelistEnabled
     self.burner = _burnerAddress
-    self.controller = msg.sender
+    self.governance = msg.sender
 
 
 @internal
@@ -291,7 +291,7 @@ def _updateInterest(_user: address):
     else:
         newLoan.snapshotInterestVariable = self.defaultInterestVariable
     ### Run Checks
-    assert msg.sender == self.controller
+    assert msg.sender == self.governance
     assert self.activeUsers[_user] == True
     ### Update Interest
     self.totalInterestAmount += gainedInterest
@@ -309,13 +309,9 @@ def updateInterest(_user: address):
 
 
 @external
-def updateSpecialUser(_user: address, _maxLTVRatio: uint256, _maxBorrowAmount: uint256, _interestVariable: uint256, _minCollateralValue: uint256, _removeSpecialUser: bool):
-    assert msg.sender == self.controller
+def updateSpecialUser(_user: address, _maxLTVRatio: uint256, _maxBorrowAmount: uint256, _interestVariable: uint256, _removeSpecialUser: bool) -> bool:
+    assert msg.sender == self.governance
     if _removeSpecialUser == False:
-        assert _maxLTVRatio < MAX_BPS
-        assert _maxBorrowAmount > 0
-        assert _interestVariable < MAX_BPS
-        assert _minCollateralValue > 0
         newParams: SpecialLoanParams = SpecialLoanParams({specialMaxLTVRatio: _maxLTVRatio,
                                                           specialMaxBorrowAmount: _maxBorrowAmount,
                                                           specialInterestVariable: _interestVariable})
@@ -330,6 +326,7 @@ def updateSpecialUser(_user: address, _maxLTVRatio: uint256, _maxBorrowAmount: u
         self.isSpecialUser[_user] = False
         self._updateInterest(_user)
         self.specialUsers[_user] = newParams
+    return True
 
 
 @external
@@ -339,8 +336,7 @@ def setDefaultMaxBorrowAmount(_defaultMaxBorrowAmount: uint256) -> bool:
     @param _defaultMaxBorrowAmount The amount to set the max borrow amount to
     @return Success boolean
     """
-    assert msg.sender == self.controller
-    assert _defaultMaxBorrowAmount > 0
+    assert msg.sender == self.governance
     self.defaultMaxBorrowAmount = _defaultMaxBorrowAmount
     return True
 
@@ -352,8 +348,7 @@ def setDefaultMaxLTVRatio(_defaultMaxLTVRatio: uint256) -> bool:
     @param _defaultMaxLTVRatio The amount to set the max ltv ratio to
     @return Success boolean
     """
-    assert msg.sender == self.controller
-    assert _defaultMaxLTVRatio < MAX_BPS
+    assert msg.sender == self.governance
     self.defaultMaxLTVRatio = _defaultMaxLTVRatio
     return True
 
@@ -365,8 +360,7 @@ def setDefaultInterestVariable(_defaultInterestVariable: uint256) -> bool:
     @param _defaultInterestVariable The amount to set the interest variable to
     @return Success boolean
     """
-    assert msg.sender == self.controller
-    assert _defaultInterestVariable < MAX_BPS
+    assert msg.sender == self.governance
     self.defaultInterestVariable = _defaultInterestVariable
     return True
 
@@ -378,7 +372,7 @@ def addWhitelistBorrower(_borrower: address) -> bool:
     @param _borrower The address to add to the whitelist
     @return Success boolean
     """
-    assert msg.sender == self.controller
+    assert msg.sender == self.governance
     assert whitelistEnabled == True
     assert self.approvedWhitelist[_borrower] == False
     self.approvedWhitelist[_borrower] = True
@@ -393,7 +387,7 @@ def removeWhitelistBorrower(_borrower: address) -> bool:
     @param _borrower The address to remove from whitelist
     @return Success boolean
     """
-    assert msg.sender == self.controller
+    assert msg.sender == self.governance
     assert whitelistEnabled == True
     assert self.approvedWhitelist[_borrower] == True
     self.approvedWhitelist[_borrower] = False
@@ -407,22 +401,9 @@ def togglePause() -> bool:
     @notice Toggles whether borrowing is paused or not
     @return The new state of isPaused
     """
-    assert msg.sender == self.controller
+    assert msg.sender == self.governance
     if self.isPaused == True:
         self.isPaused = False
     else:
         self.isPaused = True
     return self.isPaused
-
-
-@external
-def shutdownMarket(_currentTotalLoans: uint256) -> bool:
-    """
-    @notice Disable new borrowing and depositing of the market
-    @param _currentTotalLoans The amount of the current loans, asks as a confirmation to actually shutdown
-    @return Success boolean
-    """
-    assert msg.sender == self.controller
-    assert self.isShutdown == False
-    self.isShutdown = True
-    return True
