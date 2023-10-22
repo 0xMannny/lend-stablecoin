@@ -5,8 +5,8 @@ To fork this, you must be using Brownie and Titanoboa to compile and test Vyper.
 
 Terminology:
 
-Stablecoin - An asset that attempts to maintain the same price as another asset.
-Fork - A copy of someone's code
-Vyper - A programming language similar to Python that focuses on Ethereum
-Brownie - A software that allows for developing and testing using the Vyper language.
-Titanoboa - An addon to Vyper and Brownie that allows for easier testing of the code
+Stablecoin - An asset that attempts to maintain the same price as another asset |
+Fork - A copy of someone's code |
+Vyper - A programming language similar to Python that focuses on Ethereum |
+Brownie - A software that allows for developing and testing using the Vyper language |
+Titanoboa - An addon to Vyper and Brownie that allows for easier testing of the code |
